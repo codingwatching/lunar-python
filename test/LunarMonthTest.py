@@ -13,12 +13,12 @@ class LunarMonthTest(unittest.TestCase):
     def test1(self):
         month = LunarMonth.fromYm(2023, -2)
         self.assertEqual(3, month.getIndex())
-        self.assertEqual("丙辰", month.getGanZhi())
+        self.assertEqual("乙卯", month.getGanZhi())
 
     def test2(self):
         month = LunarMonth.fromYm(2023, 3)
         self.assertEqual(4, month.getIndex())
-        self.assertEqual("丁巳", month.getGanZhi())
+        self.assertEqual("丙辰", month.getGanZhi())
 
     def test3(self):
         month = LunarMonth.fromYm(2024, 1)
@@ -28,7 +28,7 @@ class LunarMonthTest(unittest.TestCase):
     def test4(self):
         month = LunarMonth.fromYm(2023, 12)
         self.assertEqual(13, month.getIndex())
-        self.assertEqual("丙寅", month.getGanZhi())
+        self.assertEqual("乙丑", month.getGanZhi())
 
     def test5(self):
         month = LunarMonth.fromYm(2022, 1)

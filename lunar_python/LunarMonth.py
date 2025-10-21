@@ -14,7 +14,7 @@ class LunarMonth:
         self.__dayCount = day_count
         self.__firstJulianDay = first_julian_day
         self.__index = index
-        self.__zhiIndex = (index - 1 + LunarUtil.BASE_MONTH_ZHI_INDEX) % 12
+        self.__zhiIndex = (abs(lunar_month) - 1 + LunarUtil.BASE_MONTH_ZHI_INDEX) % 12
 
     @staticmethod
     def fromYm(lunar_year, lunar_month):
@@ -35,7 +35,7 @@ class LunarMonth:
 
     def getGanIndex(self):
         offset = (LunarYear.fromYear(self.__year).getGanIndex() + 1) % 5 * 2
-        return (self.__index - 1 + offset) % 10
+        return (abs(self.__month) - 1 + offset) % 10
 
     def getGan(self):
         return LunarUtil.GAN[self.getGanIndex() + 1]

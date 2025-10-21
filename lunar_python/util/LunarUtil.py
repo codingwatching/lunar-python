@@ -801,7 +801,7 @@ class LunarUtil:
         arr = []
         m = month_zhi_index - 2
         if m < 0:
-            m += 10
+            m += 12
 
         jia_zi_index = LunarUtil.getJiaZiIndex(day_gan_zhi)
         pattern = re.compile(f";{jia_zi_index:02X}(.[^;]*)")
@@ -828,7 +828,7 @@ class LunarUtil:
         arr = []
         m = month_zhi_index - 2
         if m < 0:
-            m += 10
+            m += 12
 
         jia_zi_index = LunarUtil.getJiaZiIndex(day_gan_zhi)
         pattern = re.compile(f";{jia_zi_index:02X}(.[^;]*)")
